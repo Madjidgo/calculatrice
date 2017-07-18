@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Calculatrice</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -20,7 +20,57 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <h1>Calculatrice</h1>
+
+        <div  class="container" id="calculator">
+            <form   name="calculator">
+                <table class="row" id="calc">
+                    <tr>
+                        <td>
+                            <input class="calc_screen" type="text" name="numbers" readonly>
+                        </td>
+                    </tr>
+                    <tr  >
+                        <td >
+                            <input class="  cS c " type="button" value=" C " onclick="document.calculator.numbers.value = ''">
+                              <input class="  cS c " type="button" value=" ( " onclick="document.calculator.numbers.value = '('">
+                                <input class="  cS c " type="button" value=" ) " onclick="document.calculator.numbers.value = ')'">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="cS" type="button" value=" 7 " onclick="document.calculator.numbers.value += '7'">
+                            <input class="cS" type="button" value=" 8 " onclick="document.calculator.numbers.value += '8'">
+                            <input class="cS" type="button" value=" 9 " onclick="document.calculator.numbers.value += '9'">
+                            <input class="cS" type="button" value=" + " onclick="document.calculator.numbers.value += '+'"><br />
+
+
+                            <input class="cS" type="button" value=" 4 " onclick="document.calculator.numbers.value += '4'">
+                            <input class="cS" type="button" value=" 5 " onclick="document.calculator.numbers.value += '5'">
+                            <input class="cS" type="button" value=" 6 " onclick="document.calculator.numbers.value += '6'">
+                            <input class="cS" type="button" value=" - " onclick="document.calculator.numbers.value += '-'"><br />
+
+
+                            <input class="cS" type="button" value=" 1 " onclick="document.calculator.numbers.value += '1'">
+                            <input class="cS" type="button" value=" 2 " onclick="document.calculator.numbers.value += '2'">
+                            <input class="cS" type="button" value=" 3 " onclick="document.calculator.numbers.value += '3'">
+                            <input class="cS" type="button" value=" / " onclick="document.calculator.numbers.value += '/'"><br />
+
+
+                            <input class="cS" type="button" value=" . " onclick="document.calculator.numbers.value += '.'">
+                            <input class="cS" type="button" value=" 0 " onclick="document.calculator.numbers.value += '0'">
+                            <input class="cS" type="button" value=" = " onclick="document.calculator.numbers.value = eval(calculator.numbers.value)">
+                            <input class="cS" type="button" value=" x " onclick="document.calculator.numbers.value += '*'"><br />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+        <audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"></audio>
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
